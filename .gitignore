@@ -1,0 +1,11 @@
+.ash_history
+.cache
+.ipython
+.scrapy
+.idea/workspace.xml
+.idea/misc.xml
+__pycache__
+db.sqlite3
+media
+static
+*.swp
