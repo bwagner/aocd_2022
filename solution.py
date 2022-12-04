@@ -1,10 +1,9 @@
 #!/usr/bin/env python
-from abc import ABC, abstractmethod
-from os.path import basename
 import re
-import pytest
 import sys
+from abc import ABC, abstractmethod
 
+import pytest
 from aocd.models import Puzzle
 
 
@@ -31,7 +30,9 @@ class Solution(ABC):
 
 
 def get_year_day(name):
-    return tuple(int(x) for x in re.match(r"aocd_(\d{4})_(\d{2})", name, re.IGNORECASE).groups())
+    return tuple(
+        int(x) for x in re.match(r"aocd_(\d{4})_(\d{2})", name, re.IGNORECASE).groups()
+    )
 
 
 def test_get_yd_1():

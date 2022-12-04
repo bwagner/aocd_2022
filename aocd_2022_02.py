@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-from solution import Solution
 import pytest
+
+from solution import Solution
 
 if __name__ == "__main__":
     import sys
@@ -54,7 +55,9 @@ class Aocd_2022_02(Solution):
         total = 0
         for game in data:
             ops_move, my_move = game.split()
-            total += cls.eval_game(cls.map_score[ops_move], cls.map_score[cls.map_moves[my_move]])
+            total += cls.eval_game(
+                cls.map_score[ops_move], cls.map_score[cls.map_moves[my_move]]
+            )
         return total
 
     # for 2nd half of puzzle:
@@ -84,7 +87,8 @@ class Aocd_2022_02(Solution):
         for game in data:
             ops_move, outcome = game.split()
             total += cls.eval_game(
-                cls.map_score[ops_move], cls.force_outcome(cls.map_score[ops_move], cls.map_xyz[outcome])
+                cls.map_score[ops_move],
+                cls.force_outcome(cls.map_score[ops_move], cls.map_xyz[outcome]),
             )
         return total
 
@@ -101,7 +105,9 @@ test_data = """
 A Y
 B X
 C Z
-    """.strip().split("\n")
+    """.strip().split(
+    "\n"
+)
 # we need to strip and split, since that's what the Solution class provides us.
 
 

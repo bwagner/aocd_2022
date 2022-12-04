@@ -7,7 +7,6 @@ if __name__ == "__main__":
 
 
 class Aocd_2022_01(Solution):
-
     @classmethod
     def collect(cls, data: [str]) -> list[int]:
         amounts = []
@@ -54,7 +53,9 @@ test_data = """
 9000
 
 10000
-    """.strip().split("\n")
+    """.strip().split(
+    "\n"
+)
 # we need to strip and split, since that's what the Solution class provides us.
 
 

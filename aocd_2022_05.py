@@ -7,7 +7,6 @@ if __name__ == "__main__":
 
 
 class Aocd_2022_05(Solution):
-
     @classmethod
     def get_task1(cls, all_lines: str) -> int:
         return None
@@ -31,11 +30,11 @@ test_data = """
 
 
 def test_subset():
-    assert Aocd_2022_05.get_subset_count(test_data) == None
+    assert Aocd_2022_05.get_subset_count(test_data) is None
 
 
 def test_overlap():
-    assert Aocd_2022_05.get_overlap_count(test_data) == None
+    assert Aocd_2022_05.get_overlap_count(test_data) is None
 
 
 # Main ########################################################################

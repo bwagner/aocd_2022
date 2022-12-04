@@ -8,7 +8,6 @@ if __name__ == "__main__":
 
 
 class Aocd_2022_04(Solution):
-
     @classmethod
     def get_two_pairs(cls, pair):
         # pair = "6-6,4-6"
@@ -51,7 +50,9 @@ test_data = """
 2-8,3-7
 6-6,4-6
 2-6,4-8
-""".strip().split("\n")
+""".strip().split(
+    "\n"
+)
 # we need to strip and split, since that's what the Solution class provides us.
 
 

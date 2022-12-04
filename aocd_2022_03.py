@@ -8,7 +8,6 @@ from string import ascii_lowercase as al
 
 
 class Aocd_2022_03(Solution):
-
     @classmethod
     def get_priority(cls, char: str) -> int:
         return ord(char) + 1 - [ord("A") - len(al), ord("a")][char.islower()]
@@ -31,7 +30,7 @@ class Aocd_2022_03(Solution):
         total = 0
         group_size = 3
         for i in range(0, len(data), group_size):
-            sets = [set(x) for x in data[i: i + group_size]]
+            sets = [set(x) for x in data[i : i + group_size]]
             intersection = set.intersection(*sets)
             badge = intersection.pop()
             total += Aocd_2022_03.get_priority(badge)
