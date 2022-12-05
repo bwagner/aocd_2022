@@ -54,7 +54,7 @@ test_data = """
 
 10000
 """.split("\n")[1:-1]
-# we need to strip and split, since that's what the Solution class provides us.
+# we need to split and slice, since that's what the Solution class provides us.
 
 
 def test_find_max():
