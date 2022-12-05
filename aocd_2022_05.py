@@ -142,8 +142,27 @@ def test_crates1():
     assert Aocd_2022_05.perform_moves(stacks, moves) == "CMZ"
 
 
+def test_crates2():
+    stacks = [
+        [" ", "N", "Z", "1"],
+        ["D", "C", "M", "2"],
+        [" ", " ", "P", "3"],
+    ]
+    moves = [
+        "move 1 from 2 to 1",
+        "move 3 from 1 to 3",
+        "move 2 from 2 to 1",
+        "move 1 from 1 to 2",
+    ]
+    assert Aocd_2022_05.perform_moves2(stacks, moves) == "MCD"
+
+
 def test_get_top_crates():
     assert Aocd_2022_05.get_top_crates(test_data) == "CMZ"
+
+
+def test_get_top_crates2():
+    assert Aocd_2022_05.get_top_crates2(test_data) == "MCD"
 
 
 # Main ########################################################################
