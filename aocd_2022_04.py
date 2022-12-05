@@ -50,9 +50,7 @@ test_data = """
 2-8,3-7
 6-6,4-6
 2-6,4-8
-""".strip().split(
-    "\n"
-)
+""".split("\n")[1:-1]
 # we need to strip and split, since that's what the Solution class provides us.
 
 

@@ -52,7 +52,7 @@ PmmdzqPrVvPwwTWBwg
 wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
 ttgJtRGJQctTZtZT
 CrZsJsPPZsGzwwsLwLmpwMDw
-""".strip().split()
+""".split("\n")[1:-1]
 # we need to strip and split, since that's what the Solution class provides us.
 
 

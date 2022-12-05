@@ -105,9 +105,7 @@ test_data = """
 A Y
 B X
 C Z
-    """.strip().split(
-    "\n"
-)
+""".split("\n")[1:-1]
 # we need to strip and split, since that's what the Solution class provides us.
 
 

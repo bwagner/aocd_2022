@@ -53,9 +53,7 @@ test_data = """
 9000
 
 10000
-    """.strip().split(
-    "\n"
-)
+""".split("\n")[1:-1]
 # we need to strip and split, since that's what the Solution class provides us.
 
 
