@@ -10,13 +10,11 @@ if __name__ == "__main__":
 class Aocd202206(Solution):
     @classmethod
     def find_seq(cls, data: str, seq_len):
-        i = 0
-        found = False
-        while i < len(data) - seq_len and not found:
-            found = len({data[i + j] for j in range(seq_len)}) == seq_len
-            i += 1
+        for i in range(len(data) - seq_len):
+            if len({data[i + j] for j in range(seq_len)}) == seq_len:
+                return i + seq_len
 
-        return i + seq_len - 1 if found else -1
+        return None
 
     @classmethod
     def doit(cls, data: str) -> int:
