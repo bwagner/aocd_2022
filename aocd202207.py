@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import pytest
+from aocd.exceptions import PuzzleLockedError
 
 from solution import Solution
 
@@ -18,10 +19,10 @@ class Aocd202207(Solution):
         return 5
 
     def task1(self):
-        return self.doit(self.raw_input)
+        return self.doit(self.input_data[0])
 
     def task2(self):
-        return self.doit2(self.raw_input)
+        return self.doit2(self.input_data[0])
 
 
 # Tests #######################################################################
@@ -43,13 +44,13 @@ def test_doit(test_input, expected):
 
 
 def test_doit_real1():
-    s = Aocd202207()
-    assert True
+    with pytest.raises(PuzzleLockedError):
+        s = Aocd202207()
 
 
 def test_doit_real2():
-    s = Aocd202207()
-    assert True
+    with pytest.raises(PuzzleLockedError):
+        s = Aocd202207()
 
 
 @pytest.mark.parametrize("test_input, expected", test_list)

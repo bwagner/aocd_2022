@@ -25,10 +25,10 @@ class Aocd202206(Solution):
         return cls.find_seq(data, 14)
 
     def task1(self):
-        return self.doit(self.raw_input)
+        return self.doit(self.input_data[0])
 
     def task2(self):
-        return self.doit2(self.raw_input)
+        return self.doit2(self.input_data[0])
 
 
 # Tests #######################################################################
