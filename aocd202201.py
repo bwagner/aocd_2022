@@ -6,7 +6,7 @@ if __name__ == "__main__":
     import sys
 
 
-class Aocd_2022_01(Solution):
+class Aocd202201(Solution):
     @classmethod
     def collect(cls, data: [str]) -> list[int]:
         amounts = []
@@ -58,20 +58,20 @@ test_data = """
 
 
 def test_find_max():
-    assert Aocd_2022_01.find_max(test_data) == 24_000
+    assert Aocd202201.find_max(test_data) == 24_000
 
 
 def test_find_max3():
-    assert Aocd_2022_01.find_max3(test_data) == 45_000
+    assert Aocd202201.find_max3(test_data) == 45_000
 
 
 def test_real_1():
-    s = Aocd_2022_01()
+    s = Aocd202201()
     assert s.task1() == 69626
 
 
 def test_real_2():
-    s = Aocd_2022_01()
+    s = Aocd202201()
     assert s.task2() == 206780
 
 
@@ -80,9 +80,9 @@ def test_real_2():
 
 def main():
     if len(sys.argv) > 1:
-        Aocd_2022_01.test()
+        Aocd202201.test()
     else:
-        s = Aocd_2022_01()
+        s = Aocd202201()
         print(f"task 1: {s.task1()}")
         print(f"task 2: {s.task2()}")
 

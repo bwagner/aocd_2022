@@ -32,20 +32,20 @@ class Solution(ABC):
 
 def get_year_day(name):
     return tuple(
-        int(x) for x in re.match(r"aocd_(\d{4})_(\d{2})", name, re.IGNORECASE).groups()
+        int(x) for x in re.match(r".*(\d{4})(\d{2})", name, re.IGNORECASE).groups()
     )
 
 
 def test_get_yd_1():
-    assert get_year_day("aocd_2022_01.py") == (2022, 1)
+    assert get_year_day("aocd_202201.py") == (2022, 1)
 
 
 def test_get_yd_2():
-    assert get_year_day("aocd_2025_02.py") == (2025, 2)
+    assert get_year_day("aocd_202502.py") == (2025, 2)
 
 
 def test_get_yd_3():
-    assert get_year_day("Aocd_2022_01") == (2022, 1)
+    assert get_year_day("Aocd_202201") == (2022, 1)
 
 
 def main():

@@ -7,7 +7,7 @@ if __name__ == "__main__":
     import sys
 
 
-class Aocd_2022_06(Solution):
+class Aocd202206(Solution):
     @classmethod
     def find_seq(cls, data: str, seq_len):
         i = 0
@@ -56,22 +56,22 @@ test_data2 = (
 
 @pytest.mark.parametrize("test_input, expected", test_list)
 def test_doit(test_input, expected):
-    assert Aocd_2022_06.doit(test_input) == expected
+    assert Aocd202206.doit(test_input) == expected
 
 
 def test_doit_real1():
-    s = Aocd_2022_06()
+    s = Aocd202206()
     assert s.task1() == 1833
 
 
 def test_doit_real2():
-    s = Aocd_2022_06()
+    s = Aocd202206()
     assert s.task2() == 3425
 
 
 @pytest.mark.parametrize("test_input, expected", test_data2)
 def test_doit2(test_input, expected):
-    assert Aocd_2022_06.doit2(test_input) == expected
+    assert Aocd202206.doit2(test_input) == expected
 
 
 # Main ########################################################################
@@ -79,9 +79,9 @@ def test_doit2(test_input, expected):
 
 def main():
     if len(sys.argv) > 1:
-        Aocd_2022_06.test()
+        Aocd202206.test()
     else:
-        s = Aocd_2022_06()
+        s = Aocd202206()
         print(f"task 1: {s.task1()}")
         print(f"task 2: {s.task2()}")
 

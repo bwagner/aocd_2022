@@ -7,7 +7,7 @@ if __name__ == "__main__":
     import sys
 
 
-class Aocd_2022_04(Solution):
+class Aocd202204(Solution):
     @classmethod
     def get_two_pairs(cls, pair):
         # pair = "6-6,4-6"
@@ -55,20 +55,20 @@ test_data = """
 
 
 def test_subset():
-    assert Aocd_2022_04.get_subset_count(test_data) == 2
+    assert Aocd202204.get_subset_count(test_data) == 2
 
 
 def test_overlap():
-    assert Aocd_2022_04.get_overlap_count(test_data) == 4
+    assert Aocd202204.get_overlap_count(test_data) == 4
 
 
 def test_real1():
-    s = Aocd_2022_04()
+    s = Aocd202204()
     assert s.task1() == 518
 
 
 def test_real2():
-    s = Aocd_2022_04()
+    s = Aocd202204()
     assert s.task2() == 909
 
 
@@ -77,9 +77,9 @@ def test_real2():
 
 def main():
     if len(sys.argv) > 1:
-        Aocd_2022_04.test()
+        Aocd202204.test()
     else:
-        s = Aocd_2022_04()
+        s = Aocd202204()
         print(f"task 1: {s.task1()}")
         print(f"task 2: {s.task2()}")
 

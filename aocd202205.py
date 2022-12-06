@@ -7,7 +7,7 @@ if __name__ == "__main__":
     import sys
 
 
-class Aocd_2022_05(Solution):
+class Aocd202205(Solution):
 
     @classmethod
     def transpose(cls, stacks: [str]) -> [str]:
@@ -109,7 +109,7 @@ def test_get_sm_1():
         "move 2 from 2 to 1",
         "move 1 from 1 to 2",
     ]
-    assert Aocd_2022_05.get_stacks_and_moves(test_data) == (stacks, moves)
+    assert Aocd202205.get_stacks_and_moves(test_data) == (stacks, moves)
 
 
 def test_transpose():
@@ -124,7 +124,7 @@ def test_transpose():
         ["D", "C", "M", "2"],
         [" ", " ", "P", "3"],
     ]
-    assert Aocd_2022_05.transpose(stacks) == stacks_t
+    assert Aocd202205.transpose(stacks) == stacks_t
 
 
 def test_crates1():
@@ -139,7 +139,7 @@ def test_crates1():
         "move 2 from 2 to 1",
         "move 1 from 1 to 2",
     ]
-    assert Aocd_2022_05.perform_moves(stacks, moves) == "CMZ"
+    assert Aocd202205.perform_moves(stacks, moves) == "CMZ"
 
 
 def test_crates2():
@@ -154,15 +154,15 @@ def test_crates2():
         "move 2 from 2 to 1",
         "move 1 from 1 to 2",
     ]
-    assert Aocd_2022_05.perform_moves2(stacks, moves) == "MCD"
+    assert Aocd202205.perform_moves2(stacks, moves) == "MCD"
 
 
 def test_get_top_crates():
-    assert Aocd_2022_05.get_top_crates(test_data) == "CMZ"
+    assert Aocd202205.get_top_crates(test_data) == "CMZ"
 
 
 def test_get_top_crates2():
-    assert Aocd_2022_05.get_top_crates2(test_data) == "MCD"
+    assert Aocd202205.get_top_crates2(test_data) == "MCD"
 
 
 # Main ########################################################################
@@ -170,9 +170,9 @@ def test_get_top_crates2():
 
 def main():
     if len(sys.argv) > 1:
-        Aocd_2022_05.test()
+        Aocd202205.test()
     else:
-        s = Aocd_2022_05()
+        s = Aocd202205()
         print(f"task 1: {s.task1()}")
         print(f"task 2: {s.task2()}")
 

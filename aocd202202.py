@@ -14,7 +14,7 @@ draw = 3
 win = 6
 
 
-class Aocd_2022_02(Solution):
+class Aocd202202(Solution):
     a = x = rock
     b = y = paper
     c = z = scissors
@@ -110,11 +110,11 @@ C Z
 
 
 def test_get_score():
-    assert Aocd_2022_02.get_score(test_data) == 15
+    assert Aocd202202.get_score(test_data) == 15
 
 
 def test_real_1():
-    s = Aocd_2022_02()
+    s = Aocd202202()
     assert s.task1() == 13565
 
 
@@ -133,15 +133,15 @@ test_data_force = (
 
 @pytest.mark.parametrize("test_input, expected", test_data_force)
 def test_force_win_rock(test_input, expected):
-    assert Aocd_2022_02.force_outcome(*test_input) == expected
+    assert Aocd202202.force_outcome(*test_input) == expected
 
 
 def test_get_score2():
-    assert Aocd_2022_02.get_score2(test_data) == 12
+    assert Aocd202202.get_score2(test_data) == 12
 
 
 def test_real_2():
-    s = Aocd_2022_02()
+    s = Aocd202202()
     assert s.task2() == 12424
 
 
@@ -150,9 +150,9 @@ def test_real_2():
 
 def main():
     if len(sys.argv) > 1:
-        Aocd_2022_02.test()
+        Aocd202202.test()
     else:
-        s = Aocd_2022_02()
+        s = Aocd202202()
         print(f"task 1: {s.task1()}")
         print(f"task 1: {s.task1()}")
 
