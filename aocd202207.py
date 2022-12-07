@@ -23,7 +23,7 @@ class SessionParser:
     def __init__(self):
         self.total = None
         self.dirs = []
-        self.lowest_candidate = 30_000_000 + 100_000_000
+        self.lowest_candidate = None
         self.sizes = {}
 
     def leave_dir(self):
@@ -44,8 +44,8 @@ class SessionParser:
         while self.dirs:
             self.leave_dir()
         self.total = 0
-        unused = 70000000 - self.sizes["/"]
-        require = 30000000 - unused
+        unused = 70_000_000 - self.sizes["/"]
+        require = 30_000_000 - unused
         self.lowest_candidate = require + 100_000_000
         for k, v in self.sizes.items():
             if v <= 100_000:
