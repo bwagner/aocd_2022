@@ -11,7 +11,7 @@ class Aocd202204(Solution):
     @classmethod
     def get_two_pairs(cls, pair):
         # pair = "6-6,4-6"
-        nums = [int(x) for x in re.findall(r"(\d+)", pair)]
+        nums = [int(x) for x in re.findall(r"\d+", pair)]
         assert len(nums) == 4
         left, right = set(range(nums[0], nums[1] + 1)), set(range(nums[2], nums[3] + 1))
         return left, right
