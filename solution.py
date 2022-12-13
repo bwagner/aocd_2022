@@ -10,7 +10,8 @@ from aocd.models import Puzzle
 class Solution(ABC):
     def __init__(self):
         year, day = get_year_day(type(self).__name__)
-        self.input_data = Puzzle(year=year, day=day).input_data.split("\n")
+        self.raw_data = Puzzle(year=year, day=day).input_data
+        self.input_data = self.raw_data.split("\n")
 
     @abstractmethod
     def task1(self):
